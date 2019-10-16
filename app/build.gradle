@@ -57,5 +57,9 @@ dependencies {
 
 
 //    implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
+
+
+    implementation 'com.google.firebase:firebase-storage:10.2.0'
+    implementation 'com.google.firebase:firebase-auth:10.2.0'
 }
 apply plugin: 'com.google.gms.google-services'
