@@ -56,7 +56,7 @@ dependencies {
 //    implementation 'info.hoang8f:fbutton:1.0.5'
 
 
-//    implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
 
 
     implementation 'com.google.firebase:firebase-storage:10.2.0'
