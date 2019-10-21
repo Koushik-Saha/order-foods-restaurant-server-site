@@ -23,11 +23,11 @@ public class Common {
     public static final String baseUrl = "https://maps.googleapis.com";
 
 
-    public static String convertCodeToStatus(String code)
+    public static String convertCodeToStatus(String status)
     {
-        if (code.equals("0"))
+        if (status.equals("0"))
             return "Placed";
-        else if (code.equals("1"))
+        else if (status.equals("1"))
             return "On my way";
         else
             return "Shipped";
