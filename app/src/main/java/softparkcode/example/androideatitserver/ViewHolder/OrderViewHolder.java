@@ -10,7 +10,9 @@ import softparkcode.example.androideatitserver.Interface.ItemClickListener;
 import softparkcode.example.androideatitserver.R;
 
 
-public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnCreateContextMenuListener {
+public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,
+        View.OnLongClickListener,
+        View.OnCreateContextMenuListener {
 
     public TextView txtOrderId, txtOrderStatus, txtOrderPhone, txtOrderAddress;
 
@@ -25,6 +27,7 @@ public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnC
         txtOrderAddress = (TextView) itemView.findViewById(R.id.order_ship_to);
 
         itemView.setOnClickListener(this);
+        itemView.setOnLongClickListener(this);
         itemView.setOnCreateContextMenuListener(this);
     }
 
@@ -43,5 +46,11 @@ public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnC
 
         contextMenu.add(0,0,getAdapterPosition(), "Update");
         contextMenu.add(0,1,getAdapterPosition(), "Update");
+    }
+
+    @Override
+    public boolean onLongClick(View view) {
+        itemClickListener.onClick(view,getAdapterPosition(),true);
+        return true;
     }
 }
